@@ -1,1 +1,25 @@
-<p>users works!</p>
+<div class="users-page">
+    <div class="container">
+        <div class="__title-container">
+            <p>Danh sách tài khoản</p>
+            <button mat-raised-button color="primary">Thêm tài khoản</button>
+        </div>
+        <div class="search-switch__container">
+            <div>
+                <input class="search__user" type="search" placeholder="Tìm kiếm" />
+            </div>
+            <div>
+                <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked">{{ checked ? 'Card' : 'List' }}</mat-slide-toggle>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <div *ngFor="let account of accountList">
+                <app-user-card *ngIf="checked" [data]="account"></app-user-card>
+                <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
+            </div>
+        </div>
+    </div>
+</div>

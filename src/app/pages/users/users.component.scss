@@ -1,0 +1,51 @@
+.users-page {
+    width: fit-content;
+}
+
+.container {
+    padding: 10px;
+}
+
+button {
+    width: 140px;
+    height: 40px;
+    border: none;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.__title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    font-size: 24px;
+}
+
+.search-switch__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.search__user {
+    border-radius: 4px;
+    opacity: 0.6;
+    border: solid 1px #c8c8c8;
+    padding-left: 10px;
+    width: 240px;
+    height: 40px;
+    outline: none;
+}
+
+mat-slide-toggle {
+    background-color: black;
+}

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AccountInterface } from 'src/app/types/Account.Interface';
+import { accounts } from 'src/app/types/data';
 
 @Component({
   selector: 'app-users',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
-
+  accountList: AccountInterface[] = [...accounts];
+  checked: boolean = false;
 }
