@@ -1,27 +1,3 @@
-.__default-layout {
-    display: flex;
-}
-
-.__side-navbar {
-    width: 15%;
-}
-
-mat-toolbar {
-    background-color: white;
-    color: black;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-mat-list-item {
-    background-color: dodgerblue;
-}
-
-mat-list-item:first-child {
-    color: black;
-}
-
-mat-list-item:hover {
-    cursor: pointer;
-    background-color: lightgray;
+.sidenav {
+  width: 300px;
 }

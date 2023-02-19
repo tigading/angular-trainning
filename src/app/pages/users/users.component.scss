@@ -1,51 +1,23 @@
 .users-page {
-    width: fit-content;
+    width: 100%;
 }
 
-.container {
-    padding: 10px;
-}
+.page {
+  &--container {
+    padding: 60px;
+  }
 
-button {
-    width: 140px;
-    height: 40px;
-    border: none;
-    background-color: dodgerblue;
-    color: white;
-    font-size: 16px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-.__title-container {
+  &--header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-}
+  }
 
-p {
-    font-size: 24px;
-}
-
-.search-switch__container {
+  &--tools {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 60px;
+    gap: 40px;
+  }
 }
 
-.search__user {
-    border-radius: 4px;
-    opacity: 0.6;
-    border: solid 1px #c8c8c8;
-    padding-left: 10px;
-    width: 240px;
-    height: 40px;
-    outline: none;
-}
 
-mat-slide-toggle {
-    background-color: black;
-}
