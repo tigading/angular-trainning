@@ -1,13 +1,17 @@
 .users-page {
-    width: 100%;
+  width: 100%;
 }
 
 .page {
-  &--container {
-    padding: 60px;
+  padding: 60px;
+
+  &--title {
+    font-weight: 700;
+    font-size: 28px;
   }
 
   &--header {
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,4 +24,63 @@
   }
 }
 
+.search__user {
+  height: 42px;
+  border-radius: 6px;
+  background: none;
+  border: 1px solid #d4d4d4;
+  padding: 0 12px;
+  width: 400px;
 
+  &::placeholder {
+    color: #a3a3a3;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &--item {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
+
+.user-list__header {
+  display: flex;
+  align-items: center;
+  border: solid 1px #e8e8e8;
+  padding: 20px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  background: #f5f5f5;
+
+  .user-list__name {
+    width: 30%;
+  }
+
+  .user-list__email {
+    width: 20%;
+  }
+
+  .user-list__date {
+    width: 10%;
+  }
+
+  .user-list__gender {
+    width: 10%;
+  }
+
+  .user-list__address {
+    width: 20%;
+  }
+}

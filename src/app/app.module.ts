@@ -14,6 +14,7 @@ import { UserCardComponent } from './components/modules/users/user-card/user-car
 import { UserListComponent } from './components/modules/users/user-list/user-list.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from "@angular/material/button";
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatButtonModule } from "@angular/material/button";
     MatSlideToggleModule,
     MatSidenavModule,
     LayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

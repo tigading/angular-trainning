@@ -1,14 +1,26 @@
 <div class="user__card">
-    <div class="card__avatar">
-
+  <div class="card__avatar">
+    <div class="card__img">
+      <img
+        *ngIf="data.gender == gender.MALE"
+        src="assets/images/avatar_male.png"
+        alt=""
+      />
+      <img
+        *ngIf="data.gender == gender.FEMALE"
+        src="assets/images/avatar_female.jpg"
+        alt=""
+      />
     </div>
-    <div class="card__content">
-        <div class="card__name">{{ data.name }}</div>
-        <div class="card__account">
-            <i>( {{ data.account }} )</i>
-        </div>
-        <div class="card__date">{{ data.dob }}</div>
-        <div class="card__email">{{ data.email }}</div>
-        <div class="card__address">{{ data.address }}</div>
+  </div>
+  <div class="card__content">
+    <div class="card__name">{{ data.name }}</div>
+    <div class="card__account">
+      <i>( {{ data.account }} )</i>
     </div>
+    <div class="card__date">{{ data.dob }}</div>
+    <div class="card__email">{{ data.email }}</div>
+    <div class="card__email">{{ data.gender }}</div>
+    <div class="card__address">{{ data.address }}</div>
+  </div>
 </div>

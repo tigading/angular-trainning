@@ -1,16 +1,24 @@
 <div class="user__list">
-    <div class="list__avatar">
-        <div class="list__img">
-
-        </div>
-        <div>
-            <div class="list__name">{{ data.name }}</div>
-            <div class="list__account">{{ data.account }}</div>
-        </div>
+  <div class="list__avatar">
+    <div class="list__img">
+      <img
+        *ngIf="data.gender == gender.MALE"
+        src="assets/images/avatar_male.png"
+        alt=""
+      />
+      <img
+        *ngIf="data.gender == gender.FEMALE"
+        src="assets/images/avatar_female.jpg"
+        alt=""
+      />
     </div>
-    <div class="user__list--container">
-        <div class="list__email">{{ data.email }}</div>
-        <div class="list__date">{{ data.dob }}</div>
-        <div class="list__address">{{ data.address }}</div>
+    <div>
+      <div class="list__name">{{ data.name }}</div>
+      <div class="list__account">{{ data.account }}</div>
     </div>
+  </div>
+  <div class="list__email">{{ data.email }}</div>
+  <div class="list__date">{{ data.dob }}</div>
+  <div class="list__gender">{{ data.gender }}</div>
+  <div class="list__address">{{ data.address }}</div>
 </div>

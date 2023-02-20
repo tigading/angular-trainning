@@ -1,23 +1,39 @@
 <div class="users-page page">
-    <div class="page--container">
-        <div class="page--header">
-          <div class="page--tools">
-            <div>
-              <input class="search__user" type="search" placeholder="Tìm kiếm" />
-            </div>
-            <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked">{{ checked ? 'Card' : 'List' }}</mat-slide-toggle>
-          </div>
-          <div>
-            <button mat-flat-button color="primary">Thêm tài khoản</button>
-          </div>
-        </div>
+  <div class="page--title">Quản lí tài khoản</div>
+  <div class="page--header">
+    <div class="page--tools">
+      <div>
+        <input
+          class="search__user"
+          type="search"
+          placeholder="Tìm kiếm"
+          (keydown)="onSearch($event)"
+        />
+      </div>
+      <mat-slide-toggle
+        [checked]="checked"
+        (toggleChange)="checked = !checked"
+        color="primary"
+        >{{ checked ? "Card" : "List" }}</mat-slide-toggle
+      >
     </div>
-    <div class="page--content">
-        <div>
-            <div *ngFor="let account of accountList">
-                <app-user-card *ngIf="checked" [data]="account"></app-user-card>
-                <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
-            </div>
-        </div>
+    <div>
+      <button mat-flat-button color="primary">Thêm tài khoản</button>
     </div>
+  </div>
+  <div class="page--container">
+    <div [ngClass]="checked ? 'cards' : 'list'">
+      <div class="user-list__header" *ngIf="!checked">
+        <div class="user-list__name">Tên</div>
+        <div class="user-list__email">Email</div>
+        <div class="user-list__date">Ngày sinh</div>
+        <div class="user-list__gender">Giới tính</div>
+        <div class="user-list__address">Địa chỉ</div>
+      </div>
+      <div *ngFor="let account of accountListSearching">
+        <app-user-card *ngIf="checked" [data]="account"></app-user-card>
+        <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
+      </div>
+    </div>
+  </div>
 </div>
