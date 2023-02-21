@@ -15,6 +15,11 @@ import { UserListComponent } from './components/modules/users/user-list/user-lis
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from '@angular/material/input';
+import { UserCreateComponent } from './pages/users/features/user-create/user-create.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { PaginationComponent } from './components/modules/users/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,9 @@ import { MatInputModule } from '@angular/material/input';
     UsersComponent,
     DefaultLayoutComponent,
     UserCardComponent,
-    UserListComponent
+    UserListComponent,
+    UserCreateComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +41,10 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     LayoutModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatDatepickerModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

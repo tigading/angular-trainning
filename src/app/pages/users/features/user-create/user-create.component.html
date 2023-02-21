@@ -1,0 +1,83 @@
+<div class="create-account">
+  <div class="form-create-account">
+    <mat-card-actions novalidate class="mat-layout">
+      <mat-card-actions class="mat-layout-item mat-big">
+        <mat-card-header>
+          <div class="mat-title">Tạo tài khoản</div>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="card__img">
+            <img
+              *ngIf="data.gender == gender.MALE"
+              src="assets/images/avatar_male.png"
+              alt="avatar"
+            />
+            <img
+              *ngIf="data.gender == gender.FEMALE"
+              src="assets/images/avatar_female.jpg"
+              alt="avatar"
+            />
+          </div>
+          <div class="mat-layout">
+            <div class="mat-layout-item mat-small-size-100">
+              <label>Tên tài khoản</label>
+              <input type="text" />
+              <div class="input__error">{{ error.account }}</div>
+            </div>
+          </div>
+          <div class="mat-layout">
+            <div class="mat-layout-item mat-small-size-100">
+              <label>Tên</label>
+              <input type="text" />
+              <div class="input__error">{{ error.name }}</div>
+            </div>
+          </div>
+          <div class="mat-layout">
+            <div class="mat-layout-item mat-small-size-100">
+              <mat-datepicker>
+                <label>Ngày sinh</label>
+              </mat-datepicker>
+            </div>
+          </div>
+          <div class="mat-layout">
+            <div class="gender__layout">
+              <label class="gender__label">Giới tính:</label>
+              <div class="card__img">
+                <img
+                  *ngIf="data.gender == gender.MALE"
+                  src="assets/images/avatar_male.png"
+                  alt="avatar"
+                />
+                <img
+                  *ngIf="data.gender == gender.FEMALE"
+                  src="assets/images/avatar_female.jpg"
+                  alt="avatar"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mat-layout">
+            <div class="mat-layout-item mat-small-size-100">
+              <label>Địa chỉ</label>
+              <input *ng-model="address" />
+              <div class="input__error">{{ error.address }}</div>
+            </div>
+          </div>
+          <div class="mat-layout">
+            <div class="mat-layout-item mat-small-size-100">
+              <label>Email</label>
+              <input type="email" />
+              <div class="input__error">{{ error.email }}</div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card-actions>
+      <div class="btn">
+        <a href="/"
+          ><button class="mat-raised mat-accent cancel">Hủy</button></a
+        >
+        <button>Lưu</button>
+      </div>
+    </mat-card-actions>
+  </div>
+</div>
