@@ -9,6 +9,7 @@ import Genders from 'src/app/untils/enums/Gender';
   styleUrls: ['./user-create.component.scss']
 })
 export class UserCreateComponent {
+
   gender: typeof Genders = Genders;
   data: AccountInterface = {
     id: 0,

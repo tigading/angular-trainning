@@ -30,11 +30,9 @@
       <div class="user-list__gender">Giới tính</div>
       <div class="user-list__address">Địa chỉ</div>
     </div>
-    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div *ngFor="let account of accountListSearching">
         <app-user-card *ngIf="checked" [data]="account"></app-user-card>
         <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
       </div>
-    </div>
   </div>
 </div>

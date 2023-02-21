@@ -20,6 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { PaginationComponent } from './components/modules/users/pagination/pagination.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { PaginationComponent } from './components/modules/users/pagination/pagin
     MatInputModule,
     MatCardModule,
     MatDatepickerModule,
-    DragDropModule
+    DragDropModule,
+    MatNativeDateModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
