@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
 import Genders from 'src/app/untils/enums/Gender';
 import * as _dayjs from 'dayjs';
@@ -13,6 +13,7 @@ export class UserListComponent {
   constructor(private router: Router) {}
 
   @Input() data!: AccountInterface;
+  @Output() removed = new EventEmitter()
   gender: typeof Genders = Genders;
 
   toDobDisplay(date: any) {
@@ -21,5 +22,9 @@ export class UserListComponent {
 
   toEdit(id: number) {
     return this.router.navigate(['/users/' + id]);
+  }
+
+  toRemove(id: number){
+    this.removed.emit(id)
   }
 }

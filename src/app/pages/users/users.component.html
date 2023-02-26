@@ -1,24 +1,13 @@
 <div class="users-page page">
-  <div class="page--title">Quản lí tài khoản</div>
-  <div class="page--header">
-    <div class="page--tools">
-      <div>
-        <input
-          class="search__user"
-          type="search"
-          placeholder="Tìm kiếm"
-          (keydown)="onSearch($event)"
-        />
-      </div>
-      <mat-slide-toggle
-        [checked]="checked"
-        (toggleChange)="checked = !checked"
-        color="primary"
-        >{{ checked ? "Card" : "List" }}</mat-slide-toggle
-      >
-    </div>
-    <a href="/users/create"
-      ><button mat-flat-button color="primary">Thêm tài khoản</button></a
+    <div class="page--title">Quản lí tài khoản</div>
+    <div class="page--header">
+        <div class="page--tools">
+            <div>
+                <input class="search__user" type="search" placeholder="Tìm kiếm" (keydown)="onSearch($event)" />
+            </div>
+            <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked" color="primary">{{ checked ? "Card" : "List" }}</mat-slide-toggle>
+        </div>
+        <a href="/users/create"><button mat-flat-button color="primary">Thêm tài khoản</button></a
     >
   </div>
 </div>
@@ -33,8 +22,8 @@
       <div class="user-list__actions"></div>
     </div>
     <div *ngFor="let account of accountListSearching">
-      <app-user-card *ngIf="checked" [data]="account"></app-user-card>
-      <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
+      <app-user-card *ngIf="checked" [data]="account" (removed)="removed($event)"></app-user-card>
+      <app-user-list *ngIf="!checked" [data]="account" (removed)="removed($event)"></app-user-list>
     </div>
   </div>
 </div>

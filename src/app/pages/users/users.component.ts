@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
 import * as _dayjs from 'dayjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -8,6 +9,7 @@ import * as _dayjs from 'dayjs';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
+  constructor(private router: Router) { }
   accountList: AccountInterface[] = [];
   accountListSearching: AccountInterface[] = [];
   checked: boolean = false;
@@ -15,9 +17,7 @@ export class UsersComponent {
 
   ngOnInit() {
     // load data from localStorage
-    const users: any = localStorage.getItem('users');
-    this.accountList = [...JSON.parse(users)];
-    this.accountListSearching = this.accountList;
+    this.fetchUsers();
   }
 
   onSearch(event: Event) {
@@ -32,5 +32,18 @@ export class UsersComponent {
         account.email.toLowerCase().includes(this.searchText)
       );
     });
+  }
+
+  async removed(id: number) {
+    const index = this.accountList.findIndex(u => u.id === id)
+    this.accountList.splice(index, 1);
+    localStorage.setItem('users', JSON.stringify(this.accountList));
+    this.fetchUsers();
+  }
+
+  fetchUsers() {
+    const users: any = localStorage.getItem('users');
+    this.accountList = [...JSON.parse(users)];
+    this.accountListSearching = this.accountList;
   }
 }

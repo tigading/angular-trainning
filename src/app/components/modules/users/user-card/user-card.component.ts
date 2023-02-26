@@ -1,8 +1,12 @@
+import { Router } from '@angular/router';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { AccountInterface } from '../../../../types/Account.Interface';
-import { Component, Input } from '@angular/core';
 import Genders from 'src/app/untils/enums/Gender';
 import * as _dayjs from 'dayjs';
-import { Router } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-user-card',
@@ -13,6 +17,7 @@ export class UserCardComponent {
   constructor(private router: Router) {}
 
   @Input() data!: AccountInterface;
+  @Output() removed = new EventEmitter()
   gender: typeof Genders = Genders;
 
   toDobDisplay(date: any) {
@@ -21,5 +26,9 @@ export class UserCardComponent {
 
   toEdit(id: number) {
     return this.router.navigate(['/users/' + id]);
+  }
+
+  toRemove(id: number){
+    this.removed.emit(id)
   }
 }
