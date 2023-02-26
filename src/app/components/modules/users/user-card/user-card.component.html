@@ -4,12 +4,12 @@
       <img
         *ngIf="data.gender == gender.MALE"
         src="assets/images/avatar_male.png"
-        alt=""
+        alt="avatar"
       />
       <img
         *ngIf="data.gender == gender.FEMALE"
         src="assets/images/avatar_female.jpg"
-        alt=""
+        alt="avatar"
       />
     </div>
   </div>
@@ -20,7 +20,8 @@
     </div>
     <div class="card__date">{{ data.dob }}</div>
     <div class="card__email">{{ data.email }}</div>
-    <div class="card__email">{{ data.gender }}</div>
+    <div class="card__email"></div>
     <div class="card__address">{{ data.address }}</div>
+    <div></div>
   </div>
 </div>

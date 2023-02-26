@@ -15,29 +15,24 @@
             alt="avatar"
           />
         </div>
-        <div class="name_account-input-form">
           <div class="input-form">
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="full-width">
               <mat-label>Tên tài khoản</mat-label>
-              <input matInput />
+              <input matInput  [(ngModel)]="data.account"/>
             </mat-form-field>
             <div class="input__error">{{ error.account }}</div>
           </div>
-        </div>
-        <div class="">
           <div class="input-form">
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="full-width">
               <mat-label>Tên</mat-label>
-              <input matInput />
+              <input matInput [(ngModel)]="data.name"/>
             </mat-form-field>
             <div class="input__error">{{ error.name }}</div>
           </div>
-        </div>
-        <div class="">
           <div class="input-form">
-            <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill" class="full-width">
               <mat-label>Ngày sinh</mat-label>
-              <input matInput [matDatepicker]="picker" />
+              <input matInput [matDatepicker]="picker" [(ngModel)]="data.dob"/>
               <mat-datepicker-toggle
                 matIconSuffix
                 [for]="picker"
@@ -45,36 +40,29 @@
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
           </div>
-        </div>
-        <div class="">
           <div class="gender__layout">
-            <mat-radio-group aria-label="gender">
+            <mat-radio-group aria-label="gender" class="full-width" [(ngModel)]="data.gender">
               <label>Giới tính:</label>
-              <mat-radio-button value="1">Male</mat-radio-button>
-              <mat-radio-button value="2">Female</mat-radio-button>
+              <mat-radio-button [value]="gender.MALE">Male</mat-radio-button>
+              <mat-radio-button [value]="gender.FEMALE">Female</mat-radio-button>
             </mat-radio-group>
           </div>
-        </div>
-        <div class="">
           <div class="input-form">
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="full-width">
               <mat-label>Địa chỉ</mat-label>
-              <input matInput />
+              <input matInput [(ngModel)]="data.address"/>
             </mat-form-field>
           </div>
-        </div>
-        <div class=" ">
           <div class="input-form">
-            <mat-form-field class="example-full-width">
+            <mat-form-field class="full-width">
               <mat-label>Email</mat-label>
-              <input matInput />
+              <input matInput [(ngModel)]="data.email"/>
             </mat-form-field>
           </div>
-        </div>
       </mat-card-content>
       <div class="btn">
         <a href="/"><button mat-flat-button color="accent">Hủy</button></a>
-        <button mat-flat-button color="primary">Lưu</button>
+        <button mat-flat-button color="primary" (click)="saved()">Lưu</button>
       </div>
     </mat-card-actions>
   </mat-card>

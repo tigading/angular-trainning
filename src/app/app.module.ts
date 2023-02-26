@@ -22,6 +22,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { PaginationComponent } from './components/modules/users/pagination/pagination.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
+import {FormsModule} from "@angular/forms";
+import {AngularDayjsModule} from "angular-dayjs";
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatDatepickerModule,
     DragDropModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    FormsModule,
+    AngularDayjsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

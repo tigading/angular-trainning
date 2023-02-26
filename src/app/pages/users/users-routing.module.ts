@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from "./users.component";
 import { UserCreateComponent } from './features/user-create/user-create.component';
+import {UserDetailsComponent} from "./features/user-details/user-details.component";
 
 const routes: Routes = [
   {
@@ -12,7 +13,9 @@ const routes: Routes = [
   {
     path: 'create',
     component: UserCreateComponent
-  }
+  },
+
+  { path: 'user-details/:id', component: UserDetailsComponent }
 ];
 
 @NgModule({

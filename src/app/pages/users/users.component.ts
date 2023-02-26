@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
-import { accounts } from '../../types/data';
 
 @Component({
   selector: 'app-users',
@@ -14,8 +13,6 @@ export class UsersComponent {
   searchText = '';
 
   ngOnInit() {
-    // set data to localStorage (removed after done feature create account)
-    localStorage.setItem('users', JSON.stringify(accounts));
     // load data from localStorage
     const users: any = localStorage.getItem('users');
     this.accountList = [...JSON.parse(users)];

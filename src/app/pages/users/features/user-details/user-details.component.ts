@@ -1,16 +1,15 @@
-import { AccountErrorInterface } from './../../../../types/Account.Error.Interface';
 import { Component } from '@angular/core';
-import { AccountInterface } from 'src/app/types/Account.Interface';
-import Genders from 'src/app/untils/enums/Gender';
+import {AccountInterface} from "../../../../types/Account.Interface";
+import Genders from "../../../../untils/enums/Gender";
+import {AccountErrorInterface} from "../../../../types/Account.Error.Interface";
 
 @Component({
-  selector: 'app-user-create',
-  templateUrl: './user-create.component.html',
-  styleUrls: ['./user-create.component.scss']
+  selector: 'app-user-details',
+  templateUrl: './user-details.component.html',
+  styleUrls: ['./user-details.component.scss']
 })
-export class UserCreateComponent {
+export class UserDetailsComponent {
   accountList: AccountInterface[] = [];
-  gender: typeof Genders = Genders;
   data: AccountInterface = {
     id: 0,
     account: '',
@@ -31,20 +30,15 @@ export class UserCreateComponent {
     email: '',
     isValid: false,
   }
-
   ngOnInit() {
     // load data from localStorage
     const users: any = localStorage.getItem('users');
     this.accountList = [...JSON.parse(users)];
     this.data.id = this.accountList.length;
     const user = this.accountList.find(u => u.id === 1);
-      if(user){
-        this.data =  user;
-      }
+    if(user){
+      this.data =  user;
+    }
   }
 
-  saved(){
-    this.accountList.push(this.data)
-    localStorage.setItem('users', JSON.stringify(this.accountList));
-  }
 }
