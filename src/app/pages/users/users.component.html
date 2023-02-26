@@ -1,5 +1,4 @@
 <div class="users-page page">
-  <h2 style="background: #f6f6f6">Tiêu đề</h2>
   <div class="page--title">Quản lí tài khoản</div>
   <div class="page--header">
     <div class="page--tools">
@@ -18,7 +17,9 @@
         >{{ checked ? "Card" : "List" }}</mat-slide-toggle
       >
     </div>
-   <a href="/users/create"><button mat-flat-button color="primary">Thêm tài khoản</button></a>
+    <a href="/users/create"
+      ><button mat-flat-button color="primary">Thêm tài khoản</button></a
+    >
   </div>
 </div>
 <div class="page--container">
@@ -29,10 +30,11 @@
       <div class="user-list__date">Ngày sinh</div>
       <div class="user-list__gender">Giới tính</div>
       <div class="user-list__address">Địa chỉ</div>
+      <div class="user-list__actions"></div>
     </div>
-      <div *ngFor="let account of accountListSearching">
-        <app-user-card *ngIf="checked" [data]="account"></app-user-card>
-        <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
-      </div>
+    <div *ngFor="let account of accountListSearching">
+      <app-user-card *ngIf="checked" [data]="account"></app-user-card>
+      <app-user-list *ngIf="!checked" [data]="account"></app-user-list>
+    </div>
   </div>
 </div>

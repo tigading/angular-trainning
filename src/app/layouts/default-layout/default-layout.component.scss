@@ -2,7 +2,12 @@
   width: 300px;
 }
 
-.layout-page{
+.layout-page {
   background-color: white;
   padding: 60px 40px;
+}
+
+.active-link {
+  background: #4050b5;
+  color: white !important;
 }

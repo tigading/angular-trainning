@@ -18,10 +18,17 @@
     <div class="card__account">
       <i>( {{ data.account }} )</i>
     </div>
-    <div class="card__date">{{ data.dob }}</div>
+    <div class="card__date">{{ toDobDisplay(data.dob) }}</div>
     <div class="card__email">{{ data.email }}</div>
-    <div class="card__email"></div>
+    <div class="card__gender">
+      {{ data.gender === gender.MALE ? "Nam" : "Nữ" }}
+    </div>
     <div class="card__address">{{ data.address }}</div>
-    <div></div>
+    <div class="card__actions">
+      <button mat-button color="primary" (click)="toEdit(data.id)">
+        Chỉnh sửa
+      </button>
+      <button mat-button color="warn">Xoá</button>
+    </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
+import * as _dayjs from 'dayjs';
 
 @Component({
   selector: 'app-users',
