@@ -24,6 +24,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatRadioModule} from '@angular/material/radio';
 import {FormsModule} from "@angular/forms";
 import {AngularDayjsModule} from "angular-dayjs";
+import { SimpleComponent } from './simple/simple.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {AngularDayjsModule} from "angular-dayjs";
     UserCardComponent,
     UserListComponent,
     UserCreateComponent,
-    PaginationComponent
+    PaginationComponent,
+    SimpleComponent
   ],
   imports: [
     BrowserModule,
