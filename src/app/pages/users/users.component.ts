@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
-import * as _dayjs from 'dayjs';
-import { Router } from '@angular/router';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
@@ -10,7 +8,6 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
-  constructor(private router: Router) { }
   accountList: AccountInterface[] = [];
   accountListSearching: AccountInterface[] = [];
   checked: boolean = false;
@@ -35,13 +32,12 @@ export class UsersComponent {
     });
   }
 
-
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.accountList, event.previousIndex, event.currentIndex);
   }
 
   async removed(id: number) {
-    const index = this.accountList.findIndex(u => u.id === id)
+    const index = this.accountList.findIndex((u) => u.id === id);
     this.accountList.splice(index, 1);
     localStorage.setItem('users', JSON.stringify(this.accountList));
     this.fetchUsers();

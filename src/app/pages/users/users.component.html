@@ -1,13 +1,24 @@
 <div class="users-page page">
-    <div class="page--title">Quản lí tài khoản</div>
-    <div class="page--header">
-        <div class="page--tools">
-            <div>
-                <input class="search__user" type="search" placeholder="Tìm kiếm" (keydown)="onSearch($event)" />
-            </div>
-            <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked" color="primary">{{ checked ? "Card" : "List" }}</mat-slide-toggle>
-        </div>
-        <a href="/users/create"><button mat-flat-button color="primary">Thêm tài khoản</button></a
+  <div class="page--title">Quản lí tài khoản</div>
+  <div class="page--header">
+    <div class="page--tools">
+      <div>
+        <input
+          class="search__user"
+          type="search"
+          placeholder="Tìm kiếm"
+          (keydown)="onSearch($event)"
+        />
+      </div>
+      <mat-slide-toggle
+        [checked]="checked"
+        (toggleChange)="checked = !checked"
+        color="primary"
+        >{{ checked ? "Card" : "List" }}</mat-slide-toggle
+      >
+    </div>
+    <a href="/users/create"
+      ><button mat-flat-button color="primary">Thêm tài khoản</button></a
     >
   </div>
 </div>
@@ -22,12 +33,23 @@
       <div class="user-list__actions"></div>
     </div>
 
-    <div cdkDropList (cdkDropListDropped)="drop($event)">
-      <div  *ngFor="let account of accountListSearching" cdkDrag>
-        <div *cdkDragPlaceholder></div>
-        <div>
-          <app-user-card *ngIf="checked" [data]="account" (removed)="removed($event)"></app-user-card>
-          <app-user-list *ngIf="!checked" [data]="account" (removed)="removed($event)"></app-user-list>
+    <div
+      cdkDropList
+      (cdkDropListDropped)="drop($event)"
+      [ngClass]="checked ? 'cards--box' : 'list--box'"
+    >
+      <div *ngFor="let account of accountListSearching">
+        <div cdkDrag>
+          <app-user-card
+            *ngIf="checked"
+            [data]="account"
+            (removed)="removed($event)"
+          ></app-user-card>
+          <app-user-list
+            *ngIf="!checked"
+            [data]="account"
+            (removed)="removed($event)"
+          ></app-user-list>
         </div>
       </div>
     </div>
