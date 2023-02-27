@@ -21,9 +21,15 @@
       <div class="user-list__address">Địa chỉ</div>
       <div class="user-list__actions"></div>
     </div>
-    <div *ngFor="let account of accountListSearching">
-      <app-user-card *ngIf="checked" [data]="account" (removed)="removed($event)"></app-user-card>
-      <app-user-list *ngIf="!checked" [data]="account" (removed)="removed($event)"></app-user-list>
+
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <div  *ngFor="let account of accountListSearching" cdkDrag>
+        <div *cdkDragPlaceholder></div>
+        <div>
+          <app-user-card *ngIf="checked" [data]="account" (removed)="removed($event)"></app-user-card>
+          <app-user-list *ngIf="!checked" [data]="account" (removed)="removed($event)"></app-user-list>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AccountInterface } from 'src/app/types/Account.Interface';
 import * as _dayjs from 'dayjs';
 import { Router } from '@angular/router';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-users',
@@ -32,6 +33,11 @@ export class UsersComponent {
         account.email.toLowerCase().includes(this.searchText)
       );
     });
+  }
+
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.accountList, event.previousIndex, event.currentIndex);
   }
 
   async removed(id: number) {

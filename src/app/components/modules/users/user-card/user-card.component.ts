@@ -15,6 +15,7 @@ import * as _dayjs from 'dayjs';
 })
 export class UserCardComponent {
   constructor(private router: Router) {}
+  accountList: AccountInterface[] = [];
 
   @Input() data!: AccountInterface;
   @Output() removed = new EventEmitter()
