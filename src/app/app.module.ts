@@ -16,6 +16,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +31,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { UserCreateComponent } from './pages/users/features/user-create/user-create.component';
 import { UserDetailsComponent } from './pages/users/features/user-details/user-details.component';
 import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +63,9 @@ import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dial
     MatRadioModule,
     FormsModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatPaginatorModule,
+    MatDialogModule
   ],
   exports: [
     BrowserModule,
@@ -82,5 +87,6 @@ import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dial
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [MatConfirmDialogComponent]
 })
 export class AppModule {}
