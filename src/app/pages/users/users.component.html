@@ -1,12 +1,12 @@
 <div class="users-page page">
-  <div class="page--title">Quản lí tài khoản</div>
+  <div class="page--title">Account Management</div>
   <div class="page--header">
     <div class="page--tools">
       <div>
         <input
           class="search__user"
           type="search"
-          placeholder="Tìm kiếm"
+          placeholder="Search"
           (keydown)="onSearch($event)"
         />
       </div>
@@ -18,18 +18,18 @@
       >
     </div>
     <a href="/users/create"
-      ><button mat-flat-button color="primary">Thêm tài khoản</button></a
+      ><button mat-flat-button color="primary">Create Account</button></a
     >
   </div>
 </div>
 <div class="page--container">
   <div [ngClass]="checked ? 'cards' : 'list'">
     <div class="user-list__header" *ngIf="!checked">
-      <div class="user-list__name">Tên</div>
+      <div class="user-list__name">Name</div>
       <div class="user-list__email">Email</div>
-      <div class="user-list__date">Ngày sinh</div>
-      <div class="user-list__gender">Giới tính</div>
-      <div class="user-list__address">Địa chỉ</div>
+      <div class="user-list__date">DOB</div>
+      <div class="user-list__gender">Gender</div>
+      <div class="user-list__address">Address</div>
       <div class="user-list__actions"></div>
     </div>
 

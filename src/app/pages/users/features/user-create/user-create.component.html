@@ -2,7 +2,7 @@
   <mat-card class="form-create-account">
     <mat-card-actions novalidate class="mat-layout">
       <mat-card-content class="mat-layout-container">
-        <p>Tạo tài khoản</p>
+        <p>Create Account</p>
         <div class="card__img">
           <img
             *ngIf="data.gender == gender.MALE"
@@ -17,21 +17,21 @@
         </div>
         <div class="input-form">
           <mat-form-field class="full-width">
-            <mat-label>Tên tài khoản</mat-label>
+            <mat-label>Account name</mat-label>
             <input matInput [(ngModel)]="data.account" />
           </mat-form-field>
           <div class="input__error">{{ error.account }}</div>
         </div>
         <div class="input-form">
           <mat-form-field class="full-width">
-            <mat-label>Tên</mat-label>
+            <mat-label>Name</mat-label>
             <input matInput [(ngModel)]="data.name" />
           </mat-form-field>
           <div class="input__error">{{ error.name }}</div>
         </div>
         <div class="input-form">
           <mat-form-field appearance="fill" class="full-width">
-            <mat-label>Ngày sinh</mat-label>
+            <mat-label>DOB</mat-label>
             <input matInput [matDatepicker]="picker" [(ngModel)]="data.dob" />
             <mat-datepicker-toggle
               matIconSuffix
@@ -46,14 +46,14 @@
             class="full-width"
             [(ngModel)]="data.gender"
           >
-            <label>Giới tính:</label>
+            <label>Gender:</label>
             <mat-radio-button [value]="gender.MALE">Nam</mat-radio-button>
             <mat-radio-button [value]="gender.FEMALE">Nữ</mat-radio-button>
           </mat-radio-group>
         </div>
         <div class="input-form">
           <mat-form-field class="full-width">
-            <mat-label>Địa chỉ</mat-label>
+            <mat-label>Address</mat-label>
             <input matInput [(ngModel)]="data.address" />
           </mat-form-field>
         </div>
@@ -65,8 +65,8 @@
         </div>
       </mat-card-content>
       <div class="btn">
-        <button mat-flat-button color="primary" (click)="saved()">Lưu</button>
-        <button mat-flat-button color="accent" (click)="cancel()">Huỷ</button>
+        <button mat-flat-button color="primary" (click)="saved()">Save</button>
+        <button mat-flat-button color="accent" (click)="cancel()">Cancel</button>
       </div>
     </mat-card-actions>
   </mat-card>
