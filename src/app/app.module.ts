@@ -31,10 +31,11 @@ import { UsersComponent } from './pages/users/users.component';
 import { UserCreateComponent } from './pages/users/features/user-create/user-create.component';
 import { UserDetailsComponent } from './pages/users/features/user-details/user-details.component';
 import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dialog.component';
+import { TableDataDialogComponent } from './table-data-dialog/table-data-dialog.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     UsersComponent,
     DefaultLayoutComponent,
@@ -44,7 +45,8 @@ import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dial
     UserDetailsComponent,
     PaginationComponent,
     MatConfirmDialogComponent,
-  ],
+      TableDataDialogComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

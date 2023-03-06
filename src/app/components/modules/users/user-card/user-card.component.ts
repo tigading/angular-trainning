@@ -1,6 +1,5 @@
 import { Router } from '@angular/router';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-
 import { AccountInterface } from '../../../../types/Account.Interface';
 import Genders from 'src/app/untils/enums/Gender';
 import * as _dayjs from 'dayjs';

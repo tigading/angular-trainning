@@ -21,11 +21,11 @@ export class UsersComponent {
   onSearch(event: Event) {
     const target = event.target as HTMLInputElement;
     this.searchText = target.value;
+    console.log(target.value);
     this.accountListSearching = this.accountList.filter((account) => {
       return (
         account.name.toLowerCase().includes(this.searchText) ||
         account.address.toLowerCase().includes(this.searchText) ||
-        account.gender.toLowerCase().includes(this.searchText) ||
         account.account.toLowerCase().includes(this.searchText) ||
         account.email.toLowerCase().includes(this.searchText)
       );

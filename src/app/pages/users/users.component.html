@@ -1,24 +1,13 @@
 <div class="users-page page">
-  <div class="page--title">Account Management</div>
-  <div class="page--header">
-    <div class="page--tools">
-      <div>
-        <input
-          class="search__user"
-          type="search"
-          placeholder="Search"
-          (keydown)="onSearch($event)"
-        />
-      </div>
-      <mat-slide-toggle
-        [checked]="checked"
-        (toggleChange)="checked = !checked"
-        color="primary"
-        >{{ checked ? "Card" : "List" }}</mat-slide-toggle
-      >
-    </div>
-    <a href="/users/create"
-      ><button mat-flat-button color="primary">Create Account</button></a
+    <div class="page--title">Account Management</div>
+    <div class="page--header">
+        <div class="page--tools">
+            <div>
+                <input class="search__user" type="search" placeholder="Search" (keyup)="onSearch($event)" />
+            </div>
+            <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked" color="primary">{{ checked ? "Card" : "List" }}</mat-slide-toggle>
+        </div>
+        <a href="/users/create"><button mat-flat-button color="primary">Create Account</button></a
     >
   </div>
 </div>
