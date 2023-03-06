@@ -49,4 +49,9 @@ export class UsersComponent {
     this.accountList = [...JSON.parse(users)];
     this.accountListSearching = this.accountList;
   }
+
+  currentPage: number = 1;
+  changePage(page: number):void{
+    this.currentPage = page;
+  }
 }
