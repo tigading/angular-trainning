@@ -8,9 +8,8 @@ describe('MatConfirmDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MatConfirmDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [MatConfirmDialogComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MatConfirmDialogComponent);
     component = fixture.componentInstance;

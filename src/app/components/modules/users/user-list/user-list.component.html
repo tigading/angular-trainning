@@ -25,8 +25,10 @@
   <div class="list__address">{{ data.address }}</div>
   <div class="list__active">
     <button mat-button color="primary" (click)="toEdit(data.id)">
-      Edit
+      <mat-icon>create</mat-icon>
     </button>
-    <button mat-button color="warn" (click)="toRemove(data.id)">Delete</button>
+    <button mat-button color="warn" (click)="toRemove(data.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
   </div>
 </div>

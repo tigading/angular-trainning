@@ -14,14 +14,12 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon';
-import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 
 import { DefaultLayoutComponent } from './layouts/default-layout/default-layout.component';
 import { UserCardComponent } from './components/modules/users/user-card/user-card.component';
@@ -33,9 +31,8 @@ import { UserDetailsComponent } from './pages/users/features/user-details/user-d
 import { MatConfirmDialogComponent } from './mat-confirm-dialog/mat-confirm-dialog.component';
 import { TableDataDialogComponent } from './table-data-dialog/table-data-dialog.component';
 
-
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     UsersComponent,
     DefaultLayoutComponent,
@@ -45,8 +42,8 @@ import { TableDataDialogComponent } from './table-data-dialog/table-data-dialog.
     UserDetailsComponent,
     PaginationComponent,
     MatConfirmDialogComponent,
-      TableDataDialogComponent
-   ],
+    TableDataDialogComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -67,7 +64,7 @@ import { TableDataDialogComponent } from './table-data-dialog/table-data-dialog.
     MatDialogModule,
     MatIconModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   exports: [
     BrowserModule,
@@ -89,6 +86,6 @@ import { TableDataDialogComponent } from './table-data-dialog/table-data-dialog.
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [MatConfirmDialogComponent]
+  entryComponents: [MatConfirmDialogComponent],
 })
 export class AppModule {}

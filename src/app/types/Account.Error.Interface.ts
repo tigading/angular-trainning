@@ -7,4 +7,3 @@ export interface AccountErrorInterface {
   email: string;
   isValid: boolean;
 }
-

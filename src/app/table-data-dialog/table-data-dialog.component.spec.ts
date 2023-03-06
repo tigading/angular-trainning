@@ -11,9 +11,8 @@ describe('TableDataDialogComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TableDataDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [TableDataDialogComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

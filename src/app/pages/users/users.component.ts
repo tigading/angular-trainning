@@ -13,6 +13,7 @@ export class UsersComponent {
   checked: boolean = false;
   searchText = '';
 
+
   ngOnInit() {
     // load data from localStorage
     this.fetchUsers();

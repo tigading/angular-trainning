@@ -4,7 +4,7 @@ import { PageEvent } from '@angular/material/paginator';
 @Component({
   selector: 'app-pagination',
   templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss']
+  styleUrls: ['./pagination.component.scss'],
 })
 export class PaginationComponent {
   length = 50;
@@ -28,8 +28,9 @@ export class PaginationComponent {
 
   setPageSizeOptions(setPageSizeOptionsInput: string) {
     if (setPageSizeOptionsInput) {
-      this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
+      this.pageSizeOptions = setPageSizeOptionsInput
+        .split(',')
+        .map((str) => +str);
     }
   }
-
 }

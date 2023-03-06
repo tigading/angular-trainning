@@ -5,22 +5,18 @@ import { TableDataDialogComponent } from '../table-data-dialog/table-data-dialog
 import { AccountInterface } from './Account.Interface';
 import Genders from '../untils/enums/Gender';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SaveDialogConfirmService {
-  
-  constructor(private dialog: MatDialog) { }
-   name: string | undefined
+  constructor(private dialog: MatDialog) {}
+  name: string | undefined;
 
-  openSaveConfirmDialog(dataPayload: AccountInterface){
-  
-    
-   return this.dialog.open(TableDataDialogComponent, {
-    data: {
-      student: dataPayload
-    }
-   })
+  openSaveConfirmDialog(dataPayload: AccountInterface) {
+    return this.dialog.open(TableDataDialogComponent, {
+      data: {
+        student: dataPayload,
+      },
+    });
   }
 }

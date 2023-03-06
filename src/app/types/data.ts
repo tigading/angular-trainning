@@ -1,4 +1,4 @@
-import { AccountInterface } from 'src/app/types/Account.Interface'
+import { AccountInterface } from 'src/app/types/Account.Interface';
 import Genders from 'src/app/untils/enums/Gender';
 
 export const accounts: AccountInterface[] = [

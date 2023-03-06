@@ -6,11 +6,14 @@ import { SaveDialogConfirmService } from './save-dialog-confirm.service';
 describe('Service: SaveDialogConfirm', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SaveDialogConfirmService]
+      providers: [SaveDialogConfirmService],
     });
   });
 
-  it('should ...', inject([SaveDialogConfirmService], (service: SaveDialogConfirmService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should ...', inject(
+    [SaveDialogConfirmService],
+    (service: SaveDialogConfirmService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });

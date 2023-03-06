@@ -7,7 +7,7 @@
             </div>
             <mat-slide-toggle [checked]="checked" (toggleChange)="checked = !checked" color="primary">{{ checked ? "Card" : "List" }}</mat-slide-toggle>
         </div>
-        <a href="/users/create"><button mat-flat-button color="primary">Create Account</button></a
+        <a href="/users/create"><button mat-flat-button color="primary">Create Account<mat-icon>add_circle</mat-icon></button></a
     >
   </div>
 </div>
@@ -43,5 +43,4 @@
       </div>
     </div>
   </div>
-  <app-pagination></app-pagination>
 </div>
