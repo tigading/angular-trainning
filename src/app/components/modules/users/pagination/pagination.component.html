@@ -1,7 +1,2 @@
-<ul class="pagination">
-    <li *ngFor="let page of pages" [ngClass]="{
-    'page-item': true, active: currentPage === page
-  }" (click)="changPage.emit(page)">
-        <span class="page-link">{{ page }}</span>
-    </li>
-</ul>
+<mat-paginator [length]="200" [pageSizeOptions]="[5, 10, 15]" aria-label="Select page">
+</mat-paginator>

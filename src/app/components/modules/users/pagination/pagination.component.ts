@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { accounts } from './../../../../types/data';
+import { Component, EventEmitter, Input, Output, OnInit, NgModule } from '@angular/core';
+import { Subject } from 'rxjs';
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 
 
 @Component({
@@ -9,15 +12,5 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 
 export class PaginationComponent {
-@Input() currentPage: number = 1;
-@Input() total: number = 0;
-@Input() limit: number = 5;
-@Output() changPage = new EventEmitter<number>();
-
-  pages: number[] = [];
-  
-  ngOninit(): void{
-    const pagesCount = Math.ceil(this.total / this.limit)
-    console.log(pagesCount);
-  }
+ 
 }

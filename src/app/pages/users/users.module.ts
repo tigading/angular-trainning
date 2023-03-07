@@ -6,13 +6,16 @@ import { UsersRoutingModule } from './users-routing.module';
 
 
 
+
+
 @NgModule({
   declarations: [
-
+  
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    
   ]
 })
 export class UsersModule {

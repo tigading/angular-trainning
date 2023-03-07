@@ -88,8 +88,6 @@ export class UserCreateComponent {
   }
 
   async validateAccount(event: any){
-    console.log(event);
-    
     if (!this.data.account.trim()) {
       this.error.account = 'Account cannot be empty.';
     } else {
@@ -99,9 +97,7 @@ export class UserCreateComponent {
     }
   }
 
-  async validateName(event: any){
-    console.log(event);
-    
+  async validateName(event: any){ 
     if (!this.data.name.trim()) {
       this.error.name = 'Name cannot be empty.';
     } else {
@@ -112,8 +108,6 @@ export class UserCreateComponent {
   }
 
   async validateAddress(event: any){
-    console.log(event);
-    
     if (!this.data.address.trim()) {
       this.error.address = 'Address cannot be empty.';
     } else {
@@ -124,8 +118,6 @@ export class UserCreateComponent {
   }
 
   async validateEmail(event: any){
-    console.log(event);
-    
     if (!this.data.email.trim()) {
       this.error.email = 'Email cannot be empty.';
     } else {
